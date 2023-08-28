@@ -2,8 +2,7 @@ import { HardhatUserConfig } from 'hardhat/config';
 import '@nomicfoundation/hardhat-toolbox';
 require('dotenv').config();
 
-const { PRIVATE_KEY, ETHERSCAN_API_KEY, ARBITRUM_RPC, SEPOLIA_RPC } =
-  process.env;
+const { PRIVATE_KEY, ETHERSCAN_API, ARBITRUM_RPC, SEPOLIA_RPC } = process.env;
 
 const config: HardhatUserConfig = {
   solidity: '0.8.18',
@@ -22,7 +21,7 @@ const config: HardhatUserConfig = {
     },
   },
   etherscan: {
-    apiKey: ETHERSCAN_API_KEY,
+    apiKey: ETHERSCAN_API,
   },
 };
 
